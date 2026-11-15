@@ -1,5 +1,5 @@
 // Exactamente 6:00 AM en Colombia (12:00 PM en España)
-const countDownDate = new Date("2026-11-16T06:00:00-05:00").getTime();
+const countDownDate = new Date("2026-11-16T06:00:00" -05:00").getTime();
 
 const musica = document.getElementById("musica");
 const btnMusica = document.getElementById("btn-musica");
