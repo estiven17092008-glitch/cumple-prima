@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Felices 12, Prima!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Pantalla 1: Cuenta regresiva -->
+    <div id="countdown-container">
+      <h1>Falta muy poco para tu sorpresa... ⏳</h1>
+      <div id="timer">
+        <span id="days">00</span>d : <span id="hours">00</span>h :
+        <span id="minutes">00</span>m : <span id="seconds">00</span>s
+      </div>
+    </div>
+
+    <!-- Pantalla 2: La sorpresa de sus 12 años -->
+    <div id="surprise-container" class="hidden">
+      <h1>¡Felices 12 años, Prima! 🎂🎉</h1>
+      <p>
+        ¡Aquí tienes un recorrido por nuestros mejores recuerdos!
+        <strong>Toca cada foto para leer un mensaje secreto 💌</strong>
+      </p>
+
+      <button id="btn-musica" class="btn-musica">🎵 Poner música</button>
+      <audio id="musica" src="cancion.mp3" loop></audio>
+
+      <!-- Galería estilo Polaroid -->
+      <div class="galeria-polaroid">
+        <div
+          class="polaroid izq"
+          data-mensaje="Aunque estemos lejos, siempre somos una familia muy unida. ¡Te extraño muchísimo!"
+        >
+          <img src="img/foto1.jpg" alt="En familia" />
+          <p class="pie-foto">¡En familia! ❤️</p>
+        </div>
+        <div
+          class="polaroid der"
+          data-mensaje="¡Qué buenos momentos en nuestra tierra! Nunca pierdas esa alegría que te caracteriza."
+        >
+          <img src="img/foto2.jpg" alt="De paseo" />
+          <p class="pie-foto">¡De paseo! 🌸</p>
+        </div>
+        <div
+          class="polaroid izq"
+          data-mensaje="Sigue creciendo así de inteligente, auténtica y especial. ¡Ya son 12 años!"
+        >
+          <img src="img/foto3.jpg" alt="Qué estilo" />
+          <p class="pie-foto">¡Qué estilo! 😎</p>
+        </div>
+        <div
+          class="polaroid der"
+          data-mensaje="Esa sonrisa tuya alegra cualquier día. ¡Disfruta al máximo tu cumpleaños!"
+        >
+          <img src="img/foto4.jpg" alt="Esa sonrisa" />
+          <p class="pie-foto">¡Esa sonrisa! ✨</p>
+        </div>
+        <div
+          class="polaroid izq"
+          data-mensaje="Siempre voy a estar ahí para cuidarte y apoyarte, sin importar la distancia."
+        >
+          <img src="img/foto5.jpg" alt="Los mejores primos" />
+          <p class="pie-foto">Los mejores primos 🌟</p>
+        </div>
+        <div
+          class="polaroid der"
+          data-mensaje="Gracias por acompañarme en mis momentos más importantes. ¡Ahora me toca verte cumplir todos tus sueños!"
+        >
+          <img src="img/foto6.jpg" alt="Siempre juntos" />
+          <p class="pie-foto">¡Siempre juntos! 💫</p>
+        </div>
+        <div
+          class="polaroid izq"
+          data-mensaje="¡Hoy la protagonista eres tú! Que cumplas muchos años más llena de salud y felicidad."
+        >
+          <img src="img/foto7.jpg" alt="A celebrar tus 12" />
+          <p class="pie-foto">¡A celebrar tus 12! 🎂</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ventana emergente al tocar cada foto -->
+    <div id="modal-foto" class="modal hidden">
+      <div class="modal-contenido">
+        <span id="cerrar-modal">&times;</span>
+        <img id="modal-img" src="" alt="Recuerdo ampliado" />
+        <p id="modal-texto"></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
